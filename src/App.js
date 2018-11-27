@@ -45,7 +45,7 @@ class App extends Component {
 
           </div>
 
-          <NavStyle />
+          <NavStyle separator={true} />
 
         </section>
       </div>

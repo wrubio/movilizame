@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab, faFacebook, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faCode, faHeart } from '@fortawesome/free-solid-svg-icons'
 
 class Contribution extends Component {

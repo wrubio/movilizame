@@ -23,3 +23,35 @@ h4, h6 {
   border-top: 1px solid #9e9e9e;
   border-bottom: 0.1rem solid #DCDEDD;
 }
+/********************************************************************/
+/* GENERAL STYLES */
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+/********************************************************************/
+/* HORIZONTAL MENU STYLES */
+ul.h-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+ul.h-menu li {
+  float: left;
+}
+ul.h-menu li a {
+  float: left;
+  display: block;
+  text-align: left;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #000000;
+}
+
+ul.h-menu li a:hover {
+  color: #037362;
+}
