@@ -24,10 +24,10 @@ class Contribution extends Component {
                     </div>  
                     <div className="col-6">
                         <ul className="h-menu">
-                            <li><FontAwesomeIcon icon={faFacebook} /></li>
-                            <li><FontAwesomeIcon icon={faTwitterSquare} /></li>
-                            <li><FontAwesomeIcon icon={faEnvelope} /></li>
-                            <li><FontAwesomeIcon icon={faCode} /></li>
+                            <li><span className="fa-icon"><FontAwesomeIcon icon={faFacebook} /></span></li>
+                            <li><span className="fa-icon"><FontAwesomeIcon icon={faTwitterSquare} /></span></li>
+                            <li><span className="fa-icon"><FontAwesomeIcon icon={faEnvelope} /></span></li>
+                            <li><span className="fa-icon"><FontAwesomeIcon icon={faCode} /></span></li>
                         </ul>
                     </div>
                     <div className="col-12">

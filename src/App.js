@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './App.css';
 
 // External imports
@@ -7,24 +6,29 @@ import './App.css';
 // Components
 import Contribution from './components/contribution';
 import NavStyle from './components/nav';
+// Information components
 import Campaign from './components/campaign';
 import Fquestions from './components/fquestions';
+import Update from './components/update';
+import Comments from './components/comments';
+import Community from './components/community';
 
 class App extends Component {
   
   constructor (props) {
       super(props);
       this.state = {
-        displayCampaign: true,
-        displayFquestion: false
+        display: [true, false, false, false, false]
       }
   }
 
-  showInformation = (nameMenu) => {
-    this.setState({
-      displayCampaign: nameMenu === '#campaign' ? true : false,
-      displayFquestion: nameMenu === '#question' ? true : false
-    });
+  showInformation = (numMenu) => {
+    let newArray = [];
+    this.state.display.map((value, i) => {
+      if (i === parseInt(numMenu)) newArray[i] = true;
+      else newArray[i] = false;
+    })
+    this.setState({ display: newArray })
   }
 
   render() {
@@ -32,7 +36,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header"></header>
         
-        <NavStyle separator={false} />
+        <NavStyle separator={'topMenu'} />
         
         <section className="mt-5">
           <div className="container">
@@ -64,29 +68,32 @@ class App extends Component {
 
           </div>
 
-          <NavStyle separator={true} showInformation={this.showInformation} />
+          <NavStyle separator={'infoMenu'} showInformation={this.showInformation} />
 
           <div className="mt-5"></div>
 
           <div className="more-information container">
-            <div className="row">
-              <div className="col-sm-12 col-md-12 col-lg-8">
-                <div className={this.state.displayCampaign ? 'showFadeIn campaign p-absolute' : 'hideFadeout p-absolute'}>
-                  <Campaign />
-                </div>
-                <div className={this.state.displayFquestion ? 'showFadeIn fquestions p-absolute' : 'hideFadeout p-absolute'}>
-                  <Fquestions />
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-12 col-lg-4">
-               asdasd
-              </div>
-            </div>
+            <div className={this.state.display[0] ? 'fadeIn' : 'fadeOut'}><Campaign /></div>
+            <div className={this.state.display[1] ? 'fadeIn' : 'fadeOut'}><Fquestions /></div>
+            <div className={this.state.display[2] ? 'fadeIn' : 'fadeOut'}><Update /></div>
+            <div className={this.state.display[3] ? 'fadeIn' : 'fadeOut'}><Comments /></div>
+            <div className={this.state.display[4] ? 'fadeIn' : 'fadeOut'}><Community /></div>
           </div>
 
           <div className="mt-5"></div>
 
         </section>
+
+        <footer>
+          <NavStyle separator={'footerMenu'} />
+          <div className="mt-4"></div>
+          <div className="footer-container container">
+            asdasdas
+          </div>
+          <div className="mt-4"></div>
+          <NavStyle separator={'footerEnd'} />
+        </footer>
+        
       </div>
     );
   }

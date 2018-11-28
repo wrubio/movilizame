@@ -31,18 +31,30 @@ h4, h6 {
 .hide {
   display: none;
 }
-.p-absolute {
+.p-abs {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
 }
-.showFadeIn {
+.fadeIn {
   opacity: 1;
-  transition: 0.8s all ease-in;
+  visibility: visible;
+  height: auto;
+  transition: height 0s, opacity 0.5s ease-in;
 }
-.hideFadeout {
+.fadeOut {
   opacity: 0;
-  transition: 0.8s all ease-out;
+  visibility: hidden;
+  height: 0;
+  transition: height 0s, opacity 0.5s ease-out;
+}
+.padd-bott {
+  padding-bottom: 0px;
+}
+.form-position {
+  position: absolute;
+  right: 20px;
 }
 /********************************************************************/
 /* HORIZONTAL MENU STYLES */
@@ -54,19 +66,36 @@ ul.h-menu {
 }
 ul.h-menu li {
   float: left;
+  height: 46px;
 }
 ul.h-menu li a {
-  float: left;
   display: block;
   text-align: left;
   padding: 12px 20px;
   text-decoration: none;
   font-size: 0.8rem;
   color: #000000;
+  position: relative;
 }
-
+ul.h-menu li a span {
+  position: absolute;
+  right: 6px;
+  top: 8px;
+}
 ul.h-menu li a:hover {
   color: #037362;
+}
+ul.h-menu li span.fa-icon {
+  display: block;
+  text-align: right;
+  padding: 12px 10px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #000000;
+}
+li.active {
+  border-bottom: 3px solid #282828;
+  transition: 0.3s border-bottom ease-in;
 }
 /********************************************************************/
 /* MORE INFORMATION STYLES */
