@@ -23,7 +23,7 @@ class Contribution extends Component {
                         <button type="button" className="btn btn-outline-secondary btn-block"><FontAwesomeIcon icon={faHeart} /> Recordarme</button>
                     </div>  
                     <div className="col-6">
-                        <ul>
+                        <ul className="h-menu">
                             <li><FontAwesomeIcon icon={faFacebook} /></li>
                             <li><FontAwesomeIcon icon={faTwitterSquare} /></li>
                             <li><FontAwesomeIcon icon={faEnvelope} /></li>

@@ -31,6 +31,19 @@ h4, h6 {
 .hide {
   display: none;
 }
+.p-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.showFadeIn {
+  opacity: 1;
+  transition: 0.8s all ease-in;
+}
+.hideFadeout {
+  opacity: 0;
+  transition: 0.8s all ease-out;
+}
 /********************************************************************/
 /* HORIZONTAL MENU STYLES */
 ul.h-menu {
@@ -54,4 +67,9 @@ ul.h-menu li a {
 
 ul.h-menu li a:hover {
   color: #037362;
+}
+/********************************************************************/
+/* MORE INFORMATION STYLES */
+.more-information {
+  position: relative;
 }

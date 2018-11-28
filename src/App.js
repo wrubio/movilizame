@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './App.css';
 
 // External imports
@@ -6,8 +7,26 @@ import './App.css';
 // Components
 import Contribution from './components/contribution';
 import NavStyle from './components/nav';
+import Campaign from './components/campaign';
+import Fquestions from './components/fquestions';
 
 class App extends Component {
+  
+  constructor (props) {
+      super(props);
+      this.state = {
+        displayCampaign: true,
+        displayFquestion: false
+      }
+  }
+
+  showInformation = (nameMenu) => {
+    this.setState({
+      displayCampaign: nameMenu === '#campaign' ? true : false,
+      displayFquestion: nameMenu === '#question' ? true : false
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -45,7 +64,27 @@ class App extends Component {
 
           </div>
 
-          <NavStyle separator={true} />
+          <NavStyle separator={true} showInformation={this.showInformation} />
+
+          <div className="mt-5"></div>
+
+          <div className="more-information container">
+            <div className="row">
+              <div className="col-sm-12 col-md-12 col-lg-8">
+                <div className={this.state.displayCampaign ? 'showFadeIn campaign p-absolute' : 'hideFadeout p-absolute'}>
+                  <Campaign />
+                </div>
+                <div className={this.state.displayFquestion ? 'showFadeIn fquestions p-absolute' : 'hideFadeout p-absolute'}>
+                  <Fquestions />
+                </div>
+              </div>
+              <div className="col-sm-12 col-md-12 col-lg-4">
+               asdasd
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-5"></div>
 
         </section>
       </div>

@@ -10,13 +10,20 @@ class NavStyle extends Component {
         }
     }
 
+    onNavbar (e) {
+        e.stopPropagation();
+        const element = e.target;
+        const valHref = element.getAttribute('href');
+        this.props.showInformation(valHref);
+    }
+
     render () {
         return (
             <nav className="navbar navbar-light bg-light">
                 <div className={ this.state.type ? 'show container' : 'hide' }>
                     <ul className="h-menu">
-                        <li><a href="#campain">Campaña</a></li>
-                        <li><a href="#question">Preguntas Frecuentas</a></li>
+                        <li><a href="#campaign" onClick={(e) => this.onNavbar(e)} >Campaña</a></li>
+                        <li><a href="#question" onClick={(e) => this.onNavbar(e)}>Preguntas Frecuentas</a></li>
                         <li><a href="#updates">Actualizaciones</a>  <span className="badge badge-light">4</span></li>
                         <li><a href="#comments">Comentarios</a>  <span className="badge badge-light">4</span></li>
                         <li><a href="#comunity">Comunidad</a> </li>
