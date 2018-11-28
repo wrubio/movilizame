@@ -36,8 +36,7 @@ class NavStyle extends Component {
                         </div>
                         <div className="col-lg-4">
                             <ul className="h-menu">
-                                <li><a href="#0">Arte</a></li>
-                                <li><a href="#1">Cómics & ilustración</a></li>
+                                <li><a href="#0">La mejor forma de moverse en tu ciudad</a></li>
                             </ul>
                         </div>
                         <div className="col-lg-3"></div>

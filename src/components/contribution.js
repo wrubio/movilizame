@@ -8,30 +8,38 @@ class Contribution extends Component {
         return (
             <div className="contribution-status">
                 <h3>COP $15.000.0000</h3>
-                <p>Contribuido de 2.000.000 COP</p>
+                <p className="gray-color">Contribuido de 2.000.000 COP</p>
+
                 <div className="mt-2"></div>
-                <h4>19</h4>
-                <p>Patrocinadores</p>
+
+                <h4 className="green-color">19</h4>
+                <p className="gray-color">Patrocinadores</p>
+
                 <div className="mt-2"></div>
-                <h4>120</h4>
-                <p>Días más</p>
+
+                <h4 className="green-color">120</h4>
+                <p className="gray-color">Días más</p>
+
                 <div className="mt-4"></div>
+
                 <button type="button" className="btn btn-success btn-lg btn-block">Patrocina este proyecto</button>
+
                 <div className="mt-3"></div>
+
                 <div className="row">
                     <div className="col-6">
                         <button type="button" className="btn btn-outline-secondary btn-block"><FontAwesomeIcon icon={faHeart} /> Recordarme</button>
                     </div>  
                     <div className="col-6">
                         <ul className="h-menu">
-                            <li><span className="fa-icon"><FontAwesomeIcon icon={faFacebook} /></span></li>
-                            <li><span className="fa-icon"><FontAwesomeIcon icon={faTwitterSquare} /></span></li>
-                            <li><span className="fa-icon"><FontAwesomeIcon icon={faEnvelope} /></span></li>
-                            <li><span className="fa-icon"><FontAwesomeIcon icon={faCode} /></span></li>
+                            <li className="right"><span className="fa-icon gray-color"><FontAwesomeIcon icon={faFacebook} /></span></li>
+                            <li className="right"><span className="fa-icon gray-color"><FontAwesomeIcon icon={faTwitterSquare} /></span></li>
+                            <li className="right"><span className="fa-icon gray-color"><FontAwesomeIcon icon={faEnvelope} /></span></li>
+                            <li className="right"><span className="fa-icon gray-color"><FontAwesomeIcon icon={faCode} /></span></li>
                         </ul>
                     </div>
                     <div className="col-12">
-                        <p>Todo o nada. Este proyecto sólo será financiado si alcanza la meta antes del mié, 26 de diciembre de 2018 11:00 EST.</p>
+                        <p className="gray-color p-sm-size"><b>Todo o nada.</b> Este proyecto sólo será financiado si alcanza la meta antes del mié, 26 de diciembre de 2018 11:00 EST.</p>
                     </div>
                 </div>
             </div>

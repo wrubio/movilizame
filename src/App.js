@@ -43,12 +43,14 @@ class App extends Component {
 
             <div className="row">
               <div className="col-lg-2">
-                <div className="company-logo">Movilizate</div>
-                <div className="company-name">de: Movilizame S.A.S.</div>
-                <div className="projects">Proyectos: 1</div>
+                <div className="company-logo p-sm-size">
+                  <img src="./medias/img/logo.PNG" alt="logo movilizame" width="50" height="50" />
+                </div>
+                <div className="company-name p-sm-size green-color">de: Movilizame S.A.S.</div>
+                <div className="projects p-sm-size gray-color">Proyectos: 1</div>
               </div>
               <div className="col-sm-12 col-md-12 col-lg-10">
-                <h1>MOVILÍZAME - Movilidad inteligente en tu ciudad.</h1>
+                <h1>MOVILIZAME - Movilidad inteligente en tu ciudad.</h1>
                 <p className="subtitle">Con movilizate puedes seleccionar asdasdasdas asdas asd asd asdasd asdasdasdasda</p>
               </div>
             </div>
@@ -59,6 +61,15 @@ class App extends Component {
                   <div className="main-video">
                     <iframe width="100%" height="420" src="https://www.youtube.com/embed/Q3JBvLOzL0o" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                   </div>
+
+                  <div className="mt-3"></div>
+
+                  <div className="icons-information">
+                    asdasdas
+                  </div>
+
+                  <div className="mt-5"></div>
+
                 </div>
                 <div className="col-sm-12 col-md-12 col-lg-4">
                   <Contribution />
