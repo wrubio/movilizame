@@ -66,6 +66,16 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
   transition: opacity 0.8s ease-out;
 }
+.up-transition {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+.down-transition {
+  overflow: hidden;
+  max-height: 200px;
+  transition: max-height 0.5s ease-in;
+}
 .fadeIn {
   opacity: 1;
   visibility: visible;
@@ -89,6 +99,13 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #DCDEDD;
   padding: 20px;
   margin-bottom: 20px;
+  min-height: 66px;
+}
+.bg-gray {
+  background-color: #ececec;
+}
+.clear {
+  clear: both;
 }
 /********************************************************************/
 /* HORIZONTAL MENU STYLES */
@@ -148,7 +165,8 @@ li.active {
 .img-top img {
   width: 100%;
 }
-
+/********************************************************************/
+/* MAIN VIDEO  STYLES */
 .main-video {
   position: relative;
   width: 100%;
@@ -158,4 +176,12 @@ li.active {
 }
 .main-video:first-child {
   cursor: pointer;
+}
+/********************************************************************/
+/* FQUESTIONS STYLES */
+.q-text {
+  float: left;
+}
+.q-arrow {
+  float: right;
 }

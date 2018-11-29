@@ -110,12 +110,6 @@ class App extends Component {
         </section>
 
         <footer>
-          <NavStyle separator={'footerMenu'} />
-          <div className="mt-4"></div>
-          <div className="footer-container container">
-            asdasdas
-          </div>
-          <div className="mt-4"></div>
           <NavStyle separator={'footerEnd'} />
         </footer>
         
