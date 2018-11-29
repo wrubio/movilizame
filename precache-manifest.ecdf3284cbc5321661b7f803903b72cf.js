@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/movilizame/static/js/runtime~main.9517083e.js"
   },
   {
-    "revision": "85aed4f75d8136a19611",
-    "url": "/movilizame/static/js/main.85aed4f7.chunk.js"
+    "revision": "dd18f1d77835bc4a2ef2",
+    "url": "/movilizame/static/js/main.dd18f1d7.chunk.js"
   },
   {
     "revision": "ecc0c0c307aa8b3a90b2",
     "url": "/movilizame/static/js/1.ecc0c0c3.chunk.js"
   },
   {
-    "revision": "85aed4f75d8136a19611",
-    "url": "/movilizame/static/css/main.03a47c68.chunk.css"
+    "revision": "dd18f1d77835bc4a2ef2",
+    "url": "/movilizame/static/css/main.bce1c9b1.chunk.css"
   },
   {
-    "revision": "494625897ede8a5205ad742a7771f8f3",
+    "revision": "6de264e4971f534710702da4a3ebf54f",
     "url": "/movilizame/index.html"
   }
 ];

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/movilizame/precache-manifest.67c8ead8dc4a7d866a9935288e758a81.js"
+  "/movilizame/precache-manifest.ecdf3284cbc5321661b7f803903b72cf.js"
 );
 
 workbox.clientsClaim();
