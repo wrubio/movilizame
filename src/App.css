@@ -26,7 +26,7 @@
 }
 /********************************************************************/
 /* GENERAL STYLES */
-h1, h2 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 .subtitle {
@@ -41,6 +41,9 @@ h1, h2 {
 .p-sm-size {
   font-size: 0.8rem;
 }
+.p-md-size {
+  font-size: 0.9rem;
+}
 .show {
   display: block;
 }
@@ -52,6 +55,16 @@ h1, h2 {
   top: 0;
   left: 0;
   width: 100%;
+}
+.abs-fadeIn {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s ease-in;
+}
+.abs-fadeOut {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-out;
 }
 .fadeIn {
   opacity: 1;
@@ -71,6 +84,11 @@ h1, h2 {
 .form-position {
   position: absolute;
   right: 20px;
+}
+.side-box {
+  border: 1px solid #DCDEDD;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 /********************************************************************/
 /* HORIZONTAL MENU STYLES */
@@ -120,4 +138,24 @@ li.active {
 /* MORE INFORMATION STYLES */
 .more-information {
   position: relative;
+}
+/********************************************************************/
+/* CMPAIGN STYLES */
+.img-top {
+  border: 1px solid #DCDEDD;
+}
+
+.img-top img {
+  width: 100%;
+}
+
+.main-video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 730px;
+  min-height: 420px;  
+}
+.main-video:first-child {
+  cursor: pointer;
 }

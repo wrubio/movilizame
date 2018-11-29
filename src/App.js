@@ -18,7 +18,8 @@ class App extends Component {
   constructor (props) {
       super(props);
       this.state = {
-        display: [true, false, false, false, false]
+        display: [true, false, false, false, false],
+        videoFade: true
       }
   }
 
@@ -29,6 +30,14 @@ class App extends Component {
       else newArray[i] = false;
     })
     this.setState({ display: newArray })
+  }
+
+  videoClick = () => {
+    const video = document.getElementById('main-video');
+    video.src += "?autoplay=1";
+    this.setState({
+      videoFade: false
+    })
   }
 
   render() {
@@ -59,13 +68,18 @@ class App extends Component {
               <div className="row">
                 <div className="col-sm-12 col-md-12 col-lg-8">
                   <div className="main-video">
-                    <iframe width="100%" height="420" src="https://www.youtube.com/embed/Q3JBvLOzL0o" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <div className={ this.state.videoFade ? 'p-abs abs-fadeIn' : 'p-abs abs-fadeOut' } onClick={() => this.videoClick()}>
+                      <img src="./medias/img/video.png" alt="imagen de video pricipal"/>
+                    </div>
+                    <div className={ this.state.videoFade ? 'p-abs abs-fadeOut' : 'p-abs abs-fadeIn' }>
+                      <iframe id="main-video" width="100%" height="420" src="https://www.youtube.com/embed/LTPM-RzHpng" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    </div>
                   </div>
 
                   <div className="mt-3"></div>
 
                   <div className="icons-information">
-                    asdasdas
+                    
                   </div>
 
                   <div className="mt-5"></div>
